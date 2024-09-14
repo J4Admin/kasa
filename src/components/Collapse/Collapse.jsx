@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import iconeSrc from "../../assets/icones/arrow.png";
+import iconeSrc from "/assets/icones/arrow.png";
 import "./Collapse.scss";
 
 function Collapse({ CollapseData }) {

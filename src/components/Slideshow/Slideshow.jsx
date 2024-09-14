@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import arrowLeft from "../../assets/icones/arrow-left.svg";
-import arrowRight from "../../assets/icones/arrow-right.svg";
+import arrowLeft from "/assets/icones/arrow-left.svg";
+import arrowRight from "/assets/icones/arrow-right.svg";
 import "./Slideshow.scss";
 
 const Slideshow = ({ images }) => {

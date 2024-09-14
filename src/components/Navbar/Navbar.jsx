@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss";
 
 function Navbar() {
-  const logoSrc = "src/assets/images/logo-navbar.png";
+  const logoSrc = "../kasa/assets/images/logo-navbar.png";
   const location = useLocation();
 
   const isActive = (path) =>

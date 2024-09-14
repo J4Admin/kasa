@@ -7,7 +7,7 @@ function About() {
   return (
     <>
       <Banner
-        imageSrc="/src/assets/images/banner-background-about.png"
+        imageSrc="../kasa/assets/images/banner-background-home.png"
         isHidden={true}
       />
       <Collapse CollapseData={CollapseData} />

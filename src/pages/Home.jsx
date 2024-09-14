@@ -6,7 +6,7 @@ function Home() {
   return (
     <>
       <Banner
-        imageSrc="/src/assets/images/banner-background-home.png"
+        imageSrc="../kasa/assets/images/banner-background-home.png"
         bannerText="Chez vous, partout et ailleurs"
         isHidden={false}
       />
