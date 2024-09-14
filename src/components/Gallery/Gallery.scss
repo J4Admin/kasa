@@ -1,0 +1,16 @@
+@import "../../styles/GlobalVariables";
+@import "../../styles/Breakpoints";
+.gallery {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: $main-background-color;
+  border-radius: 25px;
+  margin-block: 2em;
+  padding: 3rem;
+  gap: 3.2em;
+  @media screen and (max-width: $breakpoint-desktop) {
+    background-color: $secondary-color;
+  }
+}

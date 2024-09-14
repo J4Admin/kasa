@@ -1,0 +1,145 @@
+@import "../../styles/GlobalVariables";
+@import "../../styles/Breakpoints";
+
+.housing {
+  width: 95%;
+  color: $main-color;
+
+  &__first__block {
+    width: 50%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  &__informations {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 36px;
+    font-weight: $font-medium;
+  }
+  &__location {
+    display: flex;
+    font-size: 18px;
+    font-weight: $font-medium;
+    color: black;
+  }
+  &__tag__list {
+    min-width: 40%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    gap: 1em;
+  }
+  &__tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    max-width: 25%;
+    font-size: 0.8em;
+    max-height: 15%;
+    min-width: 20vh;
+    padding: 0.6em 0.8em;
+    font-weight: $font-bold;
+    background-color: $main-color;
+    border-radius: 10px;
+    color: $secondary-color;
+  }
+  &__second__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    min-height: 16vh;
+    .housing__host {
+      box-sizing: border-box;
+      width: 62%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      &__information {
+        display: flex;
+        justify-content: flex-end;
+      }
+      &__name {
+        margin-inline-end: 0.5em;
+        text-align: end;
+        width: 15%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 0;
+      }
+      &__picture {
+        width: 75px;
+        height: 75px;
+        object-fit: cover;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 3px,
+          rgba(0, 0, 0, 0.06) 0px 1px 2px;
+      }
+      &__rating {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 2em;
+        & .empty {
+          color: $secondary-background-color;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-desktop) {
+    &__second__block,
+    &__first__block {
+      width: 85%;
+    }
+    &__first__block {
+      width: 100%;
+    }
+    &__second__block {
+      position: relative;
+      width: 95%;
+      align-items: flex-start;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      .housing__host__information,
+      .housing__host__rating {
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        align-items: center;
+      }
+      & .housing__host__rating {
+        justify-content: flex-start;
+      }
+    }
+    &__host__information {
+      width: 100%;
+    }
+    &__tag {
+      max-width: 25%;
+    }
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    &__host__information {
+      font-size: 0.8em;
+    }
+    & &__host__rating {
+      font-size: 1.4em;
+    }
+  }
+}

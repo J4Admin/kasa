@@ -1,0 +1,60 @@
+@import "../../styles/GlobalVariables";
+@import "../../styles/Breakpoints";
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+  & .navbar__logo {
+    margin: 2rem auto 2rem 0;
+  }
+  & ul,
+  & li {
+    display: flex;
+    box-sizing: border-box;
+    object-fit: cover;
+    margin-right: 1rem;
+    gap: 1em;
+    flex-wrap: nowrap;
+  }
+
+  &__link {
+    font-size: 2em;
+    margin: auto;
+    color: $tertiary-color;
+    text-decoration: none;
+    &--active {
+      text-decoration: underline;
+    }
+  }
+  @media screen and (max-width: $breakpoint-desktop) {
+    margin-inline: 4em;
+    & {
+      .navbar__logo {
+        width: 7em;
+      }
+      &__link {
+        font-size: 1em;
+      }
+    }
+  }
+  @media screen and (max-width: $breakpoint-tablet) {
+    & {
+      margin-inline: 2em;
+    }
+    .navbar__logo {
+      margin-inline-start: 1em;
+      width: 5em;
+    }
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    margin-inline: 1em;
+    .navbar__logo {
+      margin-inline-start: 2em;
+      width: 5em;
+    }
+    &__link {
+      font-size: 0.8em;
+    }
+  }
+}

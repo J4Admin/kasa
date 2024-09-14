@@ -1,0 +1,55 @@
+@import "../../styles/GlobalVariables";
+@import "../../styles/Breakpoints";
+
+.notfound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  min-height: 70vh;
+  width: 70%;
+  gap: 2em;
+  &__title,
+  &__text {
+    color: $main-color;
+  }
+  &__title {
+    font-size: 12em;
+  }
+  &__text {
+    display: flex;
+    gap: 0.4em;
+    text-align: center;
+    justify-content: space-between;
+    &--line2{
+      display: flex;
+    }
+    &--line2{
+      display: flex;
+    }
+  }
+  @media screen and (max-width: $breakpoint-tablet){
+    &__text {
+      display: flex;
+      gap: 0.4em;
+      text-align: center;
+      justify-content: space-between;
+      flex-direction: column;
+      &--line2{
+        
+      }
+      &--line2{
+      
+      }
+  } 
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    &__title {
+      font-size: 8em;
+      margin: 0;
+    }
+    &__link {
+      font-size: 0.6em;
+    }
+  }
+}

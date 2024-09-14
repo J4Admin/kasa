@@ -1,0 +1,39 @@
+@import "../../styles/GlobalVariables";
+
+.footer {
+  margin-top: 2em;
+  min-width: 100%;
+  min-height: 8vh;
+  max-width: 1240px;
+
+  &,
+  &__background,
+  &__logo,
+  &__text {
+    min-width: 100%;
+    color: $secondary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__background {
+    gap: 2em;
+    background-color: $tertiary-color;
+    width: 100vw;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 5vw;
+    padding-top: 4em;
+    min-width: 10em;
+  }
+  &__text {
+    max-width: 47%;
+    min-width: 46%;
+    text-align: center;
+    padding-bottom: 2em;
+  }
+}
